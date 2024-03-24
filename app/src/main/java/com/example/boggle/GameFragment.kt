@@ -167,6 +167,7 @@ class GameFragment: Fragment() {
                 "Congrats you won points",
                 Toast.LENGTH_SHORT
             ).show()
+            (activity as? MainActivity)?.updateScore(10)
         }
         else {
             Toast.makeText(

@@ -2,5 +2,6 @@
     <string name="app_name">Boggle</string>
     <string name="clear_button">Clear</string>
     <string name="submit_button">Submit</string>
-    <string name="points">Points</string>
+    <string name="score">Score:</string>
+    <string name="new_game_button">New Game</string>
 </resources>
