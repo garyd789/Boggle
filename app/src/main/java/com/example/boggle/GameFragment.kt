@@ -37,6 +37,7 @@ class GameFragment: Fragment() {
 
     private val alphabet = arrayListOf<Char>('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
     private val dictionaryList: ArrayList<String> = arrayListOf("")
+    private var vowelEnsurer = 0;
     private var userInput = ""
     private var _binding: FragmentGameBinding? = null
 
@@ -199,9 +200,32 @@ class GameFragment: Fragment() {
 
 
 
-    private fun setLetter(): Char {
-        val randomNumber = Random.nextInt(0, 26)
-        return alphabet[randomNumber]
+    private fun setLetter(id: String): Char {
+        Log.d(TAG, "VowelEnsurer: $vowelEnsurer")
+        val vowels = listOf('A', 'E', 'I', 'O', 'U')
+        if (vowelEnsurer < 2) {
+            if (id == "button7" || id == "button10"){
+                vowelEnsurer++
+                return vowels.random()
+            }
+            val randomNumber = Random.nextInt(0, 100)
+            if (randomNumber > 50) {
+                vowelEnsurer++
+                return vowels.random()
+            } else {
+                val alphaNumber = Random.nextInt(0,26)
+                if (alphaNumber in listOf(0, 4, 8, 14, 20)) {
+                    vowelEnsurer++
+                }
+                return alphabet[alphaNumber]
+            }
+        }
+        else {
+            val alphaNumber = Random.nextInt(0,26)
+            return alphabet[alphaNumber]
+        }
+
+
     }
 
     private fun pickLetter(letter:String) {
@@ -324,22 +348,23 @@ class GameFragment: Fragment() {
     }
 
      fun newGame(){
-         binding.button.setText(setLetter().toString())
-         binding.button2.setText(setLetter().toString())
-         binding.button3.setText(setLetter().toString())
-         binding.button4.setText(setLetter().toString())
-         binding.button5.setText(setLetter().toString())
-         binding.button6.setText(setLetter().toString())
-         binding.button7.setText(setLetter().toString())
-         binding.button8.setText(setLetter().toString())
-         binding.button9.setText(setLetter().toString())
-         binding.button10.setText(setLetter().toString())
-         binding.button11.setText(setLetter().toString())
-         binding.button12.setText(setLetter().toString())
-         binding.button13.setText(setLetter().toString())
-         binding.button14.setText(setLetter().toString())
-         binding.button15.setText(setLetter().toString())
-         binding.button16.setText(setLetter().toString())
+         binding.button.setText(setLetter("button1").toString())
+         binding.button2.setText(setLetter("button2").toString())
+         binding.button3.setText(setLetter("button3").toString())
+         binding.button4.setText(setLetter("button4").toString())
+         binding.button5.setText(setLetter("button5").toString())
+         binding.button6.setText(setLetter("button6").toString())
+         binding.button7.setText(setLetter("button7").toString())
+         binding.button8.setText(setLetter("button8").toString())
+         binding.button9.setText(setLetter("button9").toString())
+         binding.button10.setText(setLetter("button10").toString())
+         binding.button11.setText(setLetter("button11").toString())
+         binding.button12.setText(setLetter("button12").toString())
+         binding.button13.setText(setLetter("button13").toString())
+         binding.button14.setText(setLetter("button14").toString())
+         binding.button15.setText(setLetter("button15").toString())
+         binding.button16.setText(setLetter("button16").toString())
+
          enableButtons()
          currentPath = arrayListOf("")
          pastWords = arrayListOf("")
