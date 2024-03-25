@@ -32,6 +32,8 @@ class ControlFragment : Fragment() {
         listener?.newGame(true)
     }
 
+    private var score = 0
+
     private var _binding: FragmentControlBinding? = null
     private val binding
         get() = checkNotNull(_binding) {
@@ -48,14 +50,17 @@ class ControlFragment : Fragment() {
 
         binding.newGameButton.setOnClickListener(){
             signalNewGame()
+            score = 0
+            updateScoreDisplay(0)
         }
 
         return binding.root
     }
 
-    fun updateScoreDisplay(newScore: Int) {
-        binding.scoreDisplay.text = "Score: ${newScore.toString()}"
-        Log.d(TAG, "Updated score display: $newScore")
+    fun updateScoreDisplay(points: Int) {
+        score += points
+        binding.scoreDisplay.text = "Score: ${score.toString()}"
+        Log.d(TAG, "Updated score display: $score")
     }
 
     override fun onDestroyView() {

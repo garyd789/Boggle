@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(), GameFragment.ScoreInterface, ControlFr
         Log.d(TAG, "New Game Starting")
         val gameFrag = supportFragmentManager.findFragmentById(R.id.game_fragment_container) as? GameFragment
         gameFrag?.newGame()
+
     }
 
 
