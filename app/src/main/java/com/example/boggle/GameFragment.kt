@@ -62,6 +62,7 @@ class GameFragment: Fragment() {
     private var currentPath = arrayListOf("")
     private var possiblePaths = listOf("")
     private var incorrectPathing = false;
+    private var pastWords = arrayListOf("")
 
     private val binding
         get() = checkNotNull(_binding) {
@@ -234,9 +235,8 @@ class GameFragment: Fragment() {
     }
 
     private fun submitWord() {
-        if ((userInput.lowercase() in dictionaryList
-                    || userInput in dictionaryList
-                )  && !incorrectPathing) {
+        if (userInput.lowercase() in dictionaryList && !incorrectPathing
+            && userInput.lowercase() !in pastWords) {
             val points = calculatePoints(userInput)
             if (points > 0) {
                 Toast.makeText(
@@ -244,6 +244,7 @@ class GameFragment: Fragment() {
                     "Congrats you won points",
                     Toast.LENGTH_SHORT
                 ).show()
+                pastWords += userInput.lowercase()
             }
             else {
                 Toast.makeText(
@@ -277,6 +278,9 @@ class GameFragment: Fragment() {
     }
 
     private fun calculatePoints(word: String): Int {
+        if (userInput.length < 3) {
+            return -10
+        }
         var points = 0
         var multiplier = false
         var vowelCount = 0
@@ -309,7 +313,7 @@ class GameFragment: Fragment() {
             context?.assets?.open("dictionary.txt")?.bufferedReader().use  { reader ->
                 if (reader != null) {
                     reader.forEachLine { line ->
-                        dictionaryList.add(line)
+                        dictionaryList.add(line.lowercase())
                     }
                 }
             }
