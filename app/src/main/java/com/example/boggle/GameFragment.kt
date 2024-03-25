@@ -47,7 +47,7 @@ class GameFragment: Fragment() {
         "button4" to listOf("button3", "button7", "button8"),
         "button5" to listOf("button1", "button2", "button6", "button9", "button10"),
         "button6" to listOf("button1", "button2", "button3", "button5", "button7", "button9", "button10", "button11"),
-        "button7" to listOf("button2", "button3", "button4", "button6", "button7", "button8", "buttion10", "button11", "button12"),
+        "button7" to listOf("button2", "button3", "button4", "button6", "button7", "button8", "button10", "button11", "button12"),
         "button8" to listOf("button3", "button4", "button7", "button11", "button12"),
         "button9" to listOf("button5", "button6", "button10", "button13", "button14"),
         "button10" to listOf("button5", "button6", "button7", "button9", "button11", "button13", "button14", "button15"),
@@ -274,11 +274,12 @@ class GameFragment: Fragment() {
             }
 
         }
+        enableButtons()
         clearWord()
     }
 
     private fun calculatePoints(word: String): Int {
-        if (userInput.length < 3) {
+        if (userInput.length < 4) {
             return -10
         }
         var points = 0
@@ -339,26 +340,31 @@ class GameFragment: Fragment() {
          binding.button14.setText(setLetter().toString())
          binding.button15.setText(setLetter().toString())
          binding.button16.setText(setLetter().toString())
-         binding.button.isEnabled = true
-         binding.button2.isEnabled = true
-         binding.button3.isEnabled = true
-         binding.button4.isEnabled = true
-         binding.button5.isEnabled = true
-         binding.button6.isEnabled = true
-         binding.button7.isEnabled = true
-         binding.button8.isEnabled = true
-         binding.button9.isEnabled = true
-         binding.button10.isEnabled = true
-         binding.button11.isEnabled = true
-         binding.button12.isEnabled = true
-         binding.button13.isEnabled = true
-         binding.button14.isEnabled = true
-         binding.button15.isEnabled = true
-         binding.button16.isEnabled = true
-
+         enableButtons()
          currentPath = arrayListOf("")
+         pastWords = arrayListOf("")
          incorrectPathing = false
          clearWord()
+    }
+
+    private fun enableButtons(){
+        binding.button.isEnabled = true
+        binding.button2.isEnabled = true
+        binding.button3.isEnabled = true
+        binding.button4.isEnabled = true
+        binding.button5.isEnabled = true
+        binding.button6.isEnabled = true
+        binding.button7.isEnabled = true
+        binding.button8.isEnabled = true
+        binding.button9.isEnabled = true
+        binding.button10.isEnabled = true
+        binding.button11.isEnabled = true
+        binding.button12.isEnabled = true
+        binding.button13.isEnabled = true
+        binding.button14.isEnabled = true
+        binding.button15.isEnabled = true
+        binding.button16.isEnabled = true
+
     }
 }
 
