@@ -1,5 +1,6 @@
 package com.example.boggle
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +12,25 @@ import com.example.boggle.databinding.FragmentControlBinding
 private const val TAG = "ControlFragment"
 
 class ControlFragment : Fragment() {
+
+    private var listener: ControlInterface? = null
+
+    interface ControlInterface {
+        fun newGame(data: Boolean)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = if (context is ControlInterface) {
+            context
+        } else {
+            throw RuntimeException("$context must implement ControlInterface")
+        }
+    }
+
+    private fun signalNewGame(){
+        listener?.newGame(true)
+    }
 
     private var _binding: FragmentControlBinding? = null
     private val binding
@@ -26,7 +46,9 @@ class ControlFragment : Fragment() {
     ): View {
         _binding = FragmentControlBinding.inflate(inflater, container, false)
 
-
+        binding.newGameButton.setOnClickListener(){
+            signalNewGame()
+        }
 
         return binding.root
     }

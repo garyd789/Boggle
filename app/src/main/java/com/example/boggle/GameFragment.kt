@@ -1,6 +1,6 @@
 package com.example.boggle
 
-import android.content.res.AssetManager
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,15 +9,31 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.boggle.databinding.FragmentGameBinding
-import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStreamReader
 import kotlin.random.Random
 
 
 private const val TAG = "GameFragment"
 
 class GameFragment: Fragment() {
+
+    private var listener: ScoreInterface? = null
+    interface ScoreInterface {
+        fun updateScore(data: Int?)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = if (context is ScoreInterface) {
+            context
+        } else {
+            throw RuntimeException("$context must implement ScoreInterface")
+        }
+    }
+    private fun updateGameScore() {
+        listener?.updateScore(10)
+    }
+
 
     private val alphabet = arrayListOf<Char>('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
     private val dictionaryList: ArrayList<String> = arrayListOf("")
@@ -36,25 +52,10 @@ class GameFragment: Fragment() {
 
         // Button and dictionary setup
         loadDictionaryData()
-        binding.button.setText(setLetter().toString())
-        binding.button2.setText(setLetter().toString())
-        binding.button3.setText(setLetter().toString())
-        binding.button4.setText(setLetter().toString())
-        binding.button5.setText(setLetter().toString())
-        binding.button6.setText(setLetter().toString())
-        binding.button7.setText(setLetter().toString())
-        binding.button8.setText(setLetter().toString())
-        binding.button9.setText(setLetter().toString())
-        binding.button10.setText(setLetter().toString())
-        binding.button11.setText(setLetter().toString())
-        binding.button12.setText(setLetter().toString())
-        binding.button13.setText(setLetter().toString())
-        binding.button14.setText(setLetter().toString())
-        binding.button15.setText(setLetter().toString())
-        binding.button16.setText(setLetter().toString())
+        newGame()
+
 
         // Button Functionality
-
         binding.button.setOnClickListener() {
             pickLetter(binding.button.text.toString())
             Log.d(TAG, "${binding.button.text}")
@@ -134,9 +135,6 @@ class GameFragment: Fragment() {
         }
 
 
-
-
-
         return binding.root
 
 
@@ -167,7 +165,7 @@ class GameFragment: Fragment() {
                 "Congrats you won points",
                 Toast.LENGTH_SHORT
             ).show()
-            (activity as? MainActivity)?.updateScore(10)
+            updateGameScore()
         }
         else {
             Toast.makeText(
@@ -190,6 +188,25 @@ class GameFragment: Fragment() {
         } catch (e: IOException) {
             e.printStackTrace()
         }
+    }
+
+     fun newGame(){
+        binding.button.setText(setLetter().toString())
+        binding.button2.setText(setLetter().toString())
+        binding.button3.setText(setLetter().toString())
+        binding.button4.setText(setLetter().toString())
+        binding.button5.setText(setLetter().toString())
+        binding.button6.setText(setLetter().toString())
+        binding.button7.setText(setLetter().toString())
+        binding.button8.setText(setLetter().toString())
+        binding.button9.setText(setLetter().toString())
+        binding.button10.setText(setLetter().toString())
+        binding.button11.setText(setLetter().toString())
+        binding.button12.setText(setLetter().toString())
+        binding.button13.setText(setLetter().toString())
+        binding.button14.setText(setLetter().toString())
+        binding.button15.setText(setLetter().toString())
+        binding.button16.setText(setLetter().toString())
     }
 }
 
