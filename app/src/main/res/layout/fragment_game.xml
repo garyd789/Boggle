@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFD6BA">
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="400dp"
-        android:layout_height="392dp"
+        android:layout_width="383dp"
+        android:layout_height="365dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.060000002">
 
         <Button
             android:id="@+id/button"
@@ -24,8 +25,11 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button2"
@@ -35,8 +39,11 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button3"
@@ -46,8 +53,11 @@
             android:layout_rowWeight="1"
             android:layout_column="2"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button4"
@@ -57,8 +67,11 @@
             android:layout_rowWeight="1"
             android:layout_column="3"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button5"
@@ -68,8 +81,11 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button6"
@@ -79,8 +95,11 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button7"
@@ -90,8 +109,11 @@
             android:layout_rowWeight="1"
             android:layout_column="2"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button8"
@@ -101,8 +123,11 @@
             android:layout_rowWeight="1"
             android:layout_column="3"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button9"
@@ -112,8 +137,11 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button10"
@@ -123,8 +151,11 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button11"
@@ -134,8 +165,11 @@
             android:layout_rowWeight="1"
             android:layout_column="2"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button12"
@@ -145,8 +179,11 @@
             android:layout_rowWeight="1"
             android:layout_column="3"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button13"
@@ -156,8 +193,11 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button14"
@@ -167,8 +207,11 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button15"
@@ -178,8 +221,11 @@
             android:layout_rowWeight="1"
             android:layout_column="2"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/button16"
@@ -189,47 +235,61 @@
             android:layout_rowWeight="1"
             android:layout_column="3"
             android:layout_columnWeight="1"
+            android:backgroundTint="@drawable/button_color_selector"
             android:text="Button"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FAF9F9"
+            android:textSize="34sp" />
     </GridLayout>
 
     <EditText
         android:id="@+id/userInput"
-        android:layout_width="122dp"
-        android:layout_height="65dp"
+        android:layout_width="187dp"
+        android:layout_height="77dp"
+        android:background="@null"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#555B6E"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <Button
         android:id="@+id/clear_button"
         android:layout_width="122dp"
         android:layout_height="56dp"
+        android:backgroundTint="#FAF9F9"
         android:text="@string/clear_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#555B6E"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/submit_button"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.649"
+        app:strokeColor="#555B6E"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="122dp"
         android:layout_height="56dp"
+        android:backgroundTint="#555B6E"
         android:text="@string/submit_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FAF9F9"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.649" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

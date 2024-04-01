@@ -62,7 +62,6 @@ class GameFragment: Fragment() {
 
     private var currentPath = arrayListOf("")
     private var possiblePaths = listOf("")
-    private var incorrectPathing = false;
     private var pastWords = arrayListOf("")
 
     private val binding
@@ -83,100 +82,119 @@ class GameFragment: Fragment() {
 
         // Button Functionality
         binding.button.setOnClickListener() {
-            pickLetter(binding.button.text.toString())
-            buildPath("button1")
             Log.d(TAG, "${binding.button.text}")
-            binding.button.isEnabled = false
+            if (buildPath("button1")){
+                pickLetter(binding.button.text.toString())
+                binding.button.isEnabled = false
+            }
         }
         binding.button2.setOnClickListener() {
-            pickLetter(binding.button2.text.toString())
-            buildPath("button2")
             Log.d(TAG, "${binding.button2.text}")
-            binding.button2.isEnabled = false
+            if (buildPath("button2")){
+                pickLetter(binding.button2.text.toString())
+                binding.button2.isEnabled = false
+            }
         }
         binding.button3.setOnClickListener() {
-            pickLetter(binding.button3.text.toString())
-            buildPath("button3")
             Log.d(TAG, "${binding.button3.text}")
-            binding.button3.isEnabled = false
+            if (buildPath("button3")){
+                pickLetter(binding.button3.text.toString())
+                binding.button3.isEnabled = false
+            }
         }
         binding.button4.setOnClickListener() {
-            pickLetter(binding.button4.text.toString())
-            buildPath("button4")
             Log.d(TAG, "${binding.button4.text}")
-            binding.button4.isEnabled = false
+            if (buildPath("button4")){
+                pickLetter(binding.button4.text.toString())
+                binding.button4.isEnabled = false
+            }
         }
         binding.button5.setOnClickListener() {
-            pickLetter(binding.button5.text.toString())
-            buildPath("button5")
             Log.d(TAG, "${binding.button5.text}")
-            binding.button5.isEnabled = false
+            if (buildPath("button5")){
+                pickLetter(binding.button5.text.toString())
+                binding.button5.isEnabled = false
+            }
         }
         binding.button6.setOnClickListener() {
-            pickLetter(binding.button6.text.toString())
-            buildPath("button6")
             Log.d(TAG, "${binding.button6.text}")
-            binding.button6.isEnabled = false
+            if (buildPath("button6")){
+                pickLetter(binding.button6.text.toString())
+                binding.button6.isEnabled = false
+            }
         }
         binding.button7.setOnClickListener() {
-            pickLetter(binding.button7.text.toString())
-            buildPath("button7")
             Log.d(TAG, "${binding.button7.text}")
-            binding.button7.isEnabled = false
+            if (buildPath("button7")){
+                pickLetter(binding.button7.text.toString())
+                binding.button7.isEnabled = false
+            }
         }
         binding.button8.setOnClickListener() {
-            pickLetter(binding.button8.text.toString())
-            buildPath("button8")
             Log.d(TAG, "${binding.button8.text}")
-            binding.button8.isEnabled = false
+            if (buildPath("button8")){
+                pickLetter(binding.button8.text.toString())
+                binding.button8.isEnabled = false
+            }
         }
         binding.button9.setOnClickListener() {
-            pickLetter(binding.button9.text.toString())
-            buildPath("button9")
             Log.d(TAG, "${binding.button9.text}")
-            binding.button9.isEnabled = false
+            if (buildPath("button9")){
+                pickLetter(binding.button9.text.toString())
+                binding.button9.isEnabled = false
+            }
         }
         binding.button10.setOnClickListener() {
-            pickLetter(binding.button10.text.toString())
-            buildPath("button10")
             Log.d(TAG, "${binding.button10.text}")
-            binding.button10.isEnabled = false
+            if (buildPath("button10")){
+                pickLetter(binding.button10.text.toString())
+                binding.button10.isEnabled = false
+            }
         }
         binding.button11.setOnClickListener() {
-            pickLetter(binding.button11.text.toString())
-            buildPath("button11")
             Log.d(TAG, "${binding.button11.text}")
-            binding.button11.isEnabled = false
+            if (buildPath("button11")){
+                pickLetter(binding.button11.text.toString())
+                binding.button11.isEnabled = false
+            }
+
         }
         binding.button12.setOnClickListener() {
-            pickLetter(binding.button12.text.toString())
-            buildPath("button12")
             Log.d(TAG, "${binding.button12.text}")
-            binding.button12.isEnabled = false
+            if (buildPath("button12")){
+                pickLetter(binding.button12.text.toString())
+                binding.button12.isEnabled = false
+            }
+
         }
         binding.button13.setOnClickListener() {
-            pickLetter(binding.button13.text.toString())
-            buildPath("button13")
             Log.d(TAG, "${binding.button13.text}")
-            binding.button13.isEnabled = false
+            if (buildPath("button13")){
+                pickLetter(binding.button13.text.toString())
+                binding.button13.isEnabled = false
+            }
         }
         binding.button14.setOnClickListener() {
-            pickLetter(binding.button14.text.toString())
-            buildPath("button14")
             Log.d(TAG, "${binding.button14.text}")
-            binding.button14.isEnabled = false
+            if (buildPath("button14")){
+                pickLetter(binding.button14.text.toString())
+                binding.button14.isEnabled = false
+            }
         }
         binding.button15.setOnClickListener() {
-            pickLetter(binding.button15.text.toString())
-            buildPath("button15")
             Log.d(TAG, "${binding.button15.text}")
-            binding.button15.isEnabled = false
+            if (buildPath("button15")){
+                pickLetter(binding.button15.text.toString())
+                binding.button15.isEnabled = false
+            }
         }
         binding.button16.setOnClickListener() {
-            pickLetter(binding.button16.text.toString())
-            buildPath("button16")
             Log.d(TAG, "${binding.button16.text}")
-            binding.button16.isEnabled = false
+            if (buildPath("button16")){
+                pickLetter(binding.button16.text.toString())
+                binding.button16.isEnabled = false
+            }
+
         }
 
         binding.clearButton.setOnClickListener() {
@@ -201,7 +219,7 @@ class GameFragment: Fragment() {
 
 
     private fun setLetter(id: String): Char {
-        Log.d(TAG, "VowelEnsurer: $vowelEnsurer")
+
         val vowels = listOf('A', 'E', 'I', 'O', 'U')
         if (vowelEnsurer < 2) {
             if (id == "button7" || id == "button10"){
@@ -234,20 +252,25 @@ class GameFragment: Fragment() {
         binding.userInput.setText(userInput)
     }
 
-    private fun buildPath(buttonId: String) {
+    private fun buildPath(buttonId: String): Boolean {
         if (currentPath == listOf("") ) {
-            possiblePaths = buttonMapping[buttonId] ?: return
+            possiblePaths = buttonMapping[buttonId] ?: return false
             currentPath = arrayListOf(buttonId)
         }
         else {
             if (buttonId !in possiblePaths){
-                incorrectPathing = true
-                Log.d(TAG, "Incorrect Pathing")
+                Toast.makeText(
+                    requireContext(),
+                    "Please pick an adjacent letter!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return false
             }
-            possiblePaths = buttonMapping[buttonId] ?: return
+            possiblePaths = buttonMapping[buttonId] ?: return false
             currentPath += buttonId
         }
         Log.d(TAG, "Current Path: $currentPath")
+        return true
 
     }
 
@@ -256,11 +279,18 @@ class GameFragment: Fragment() {
         possiblePaths = listOf("")
         currentPath = arrayListOf("")
         binding.userInput.setText("")
+        enableButtons()
     }
 
     private fun submitWord() {
-        if (userInput.lowercase() in dictionaryList && !incorrectPathing
-            && userInput.lowercase() !in pastWords) {
+        if (userInput.lowercase() in pastWords){
+            Toast.makeText(
+                requireContext(),
+                "Word already selected",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        else if (userInput.lowercase() in dictionaryList) {
             val points = calculatePoints(userInput)
             if (points > 0) {
                 Toast.makeText(
@@ -280,23 +310,12 @@ class GameFragment: Fragment() {
             updateGameScore(points)
         }
         else {
-            if (incorrectPathing) {
-                Toast.makeText(
-                    requireContext(),
-                    "Sorry incorrect pathing! -10",
-                    Toast.LENGTH_SHORT
-                ).show()
-                updateGameScore(-10)
-            }
-            else {
-                Toast.makeText(
-                    requireContext(),
-                    "Sorry word not in dictionary! -10",
-                    Toast.LENGTH_SHORT
-                ).show()
-                updateGameScore(-10)
-            }
-
+            Toast.makeText(
+                requireContext(),
+                "Sorry word not in dictionary! -10",
+                Toast.LENGTH_SHORT
+            ).show()
+            updateGameScore(-10)
         }
         enableButtons()
         clearWord()
@@ -317,6 +336,7 @@ class GameFragment: Fragment() {
                 vowelCount++
             }
             else if (char.isLetter() && char in doubles ) {
+                points += 1
                 multiplier = true
             }
             else {
@@ -368,7 +388,6 @@ class GameFragment: Fragment() {
          enableButtons()
          currentPath = arrayListOf("")
          pastWords = arrayListOf("")
-         incorrectPathing = false
          clearWord()
     }
 

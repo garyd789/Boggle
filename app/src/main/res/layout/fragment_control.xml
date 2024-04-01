@@ -7,16 +7,18 @@
 
     <Button
         android:id="@+id/new_game_button"
-        android:layout_width="136dp"
-        android:layout_height="62dp"
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#7DB7AA"
         android:text="@string/new_game_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <TextView
         android:id="@+id/score_display"
@@ -25,10 +27,11 @@
         android:text="@string/score"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.112" />
 </androidx.constraintlayout.widget.ConstraintLayout>

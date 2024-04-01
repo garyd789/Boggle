@@ -59,6 +59,9 @@ class ControlFragment : Fragment() {
 
     fun updateScoreDisplay(points: Int) {
         score += points
+        if (score < 0){
+            score = 0
+        }
         binding.scoreDisplay.text = "Score: ${score.toString()}"
         Log.d(TAG, "Updated score display: $score")
     }
